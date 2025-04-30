@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="527.0" prefWidth="762.0" style="-fx-background-color: #ECF0F1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ahmed.LoginForm_CL">
+
+  <children>
+    <Pane layoutY="14.0" prefHeight="124.0" prefWidth="332.0" style="-fx-background-color: #ECF0F1;" AnchorPane.bottomAnchor="389.2" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
+      <children>
+        <Label layoutX="40.0" layoutY="25.0" prefHeight="48.0" prefWidth="264.0" text="Java Library" textFill="#1c2833">
+          <font>
+            <Font name="System Bold Italic" size="41.0" />
+          </font>
+        </Label>
+        <Label layoutX="100.0" layoutY="77.0" prefHeight="26.0" prefWidth="104.0" text="Read &amp; Enjoy">
+          <font>
+            <Font name="System Italic" size="17.0" />
+          </font>
+        </Label>
+      </children></Pane>
+    <Pane layoutX="14.0" layoutY="153.0" prefHeight="237.0" prefWidth="330.0">
+      <children>
+        <TextField fx:id="txtuser" layoutX="16.0" layoutY="26.0" prefHeight="43.0" prefWidth="274.0" promptText="User Name">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </TextField>
+        <PasswordField fx:id="txtid" layoutX="16.0" layoutY="104.0" prefHeight="46.0" prefWidth="274.0" promptText="User ID">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </PasswordField>
+        <Button fx:id="btn" layoutX="51.0" layoutY="184.0" mnemonicParsing="false" onAction="#Click" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: #1C2833;" text="Sign in" textFill="WHITE">
+          <font>
+            <Font name="System Bold Italic" size="18.0" />
+          </font>
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+        </Button>
+        <Label fx:id="lblmsg" layoutX="46.0" layoutY="150.0" prefHeight="17.0" prefWidth="212.0" textFill="#b10e0e" />
+      </children>
+    </Pane>
+    <Label layoutX="37.0" layoutY="474.0" prefHeight="26.0" prefWidth="189.0" text="By : Ahmed Ali Hassan " textFill="#1c2833">
+      <font>
+        <Font name="System Bold Italic" size="17.0" />
+      </font>
+    </Label>
+      <Pane layoutX="345.0" prefHeight="527.0" prefWidth="417.0">
+         <children>
+        <ImageView fitHeight="525.0" fitWidth="418.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true">
+          <image>
+            <Image url="@../../../images/18.png" />
+          </image>
+        </ImageView>
+            <ImageView fitHeight="67.0" fitWidth="89.0" layoutX="261.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/14.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="762.0" style="-fx-background-color: c0c0c079;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ahmed.Book_CL">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="235.0" style="-fx-background-color: #c0c0c9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane layoutX="16.0" layoutY="34.0" prefHeight="56.0" prefWidth="203.0" style="-fx-background-color: #14243e; -fx-background-radius: 50; -fx-border-radius: 25;">
+                    <children>
+                        <Label layoutX="77.0" layoutY="7.0" prefHeight="42.0" prefWidth="81.0" style="-fx-background-radius: 10;" text="Books" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="22.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/6.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <TextField fx:id="txttitle" layoutX="26.0" layoutY="122.0" prefHeight="42.0" prefWidth="186.0" promptText="Title">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txtauthor" layoutX="25.0" layoutY="171.0" prefHeight="42.0" prefWidth="186.0" promptText="Author">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txtyear" layoutX="25.0" layoutY="220.0" prefHeight="42.0" prefWidth="186.0" promptText="Year of publication">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="txtisbn" layoutX="26.0" layoutY="269.0" prefHeight="42.0" prefWidth="186.0" promptText="ISBN">
+               <font>
+                  <Font size="17.0" />
+               </font></TextField>
+                <Button layoutX="24.0" layoutY="395.0" mnemonicParsing="false" onAction="#Add" prefHeight="42.0" prefWidth="81.0" style="-fx-background-color: #14243e;" text="Add" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button layoutX="132.0" layoutY="395.0" mnemonicParsing="false" onAction="#Delete" prefHeight="42.0" prefWidth="81.0" style="-fx-background-color: #14243e;" text="Delete" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button layoutX="59.0" layoutY="455.0" mnemonicParsing="false" onAction="#Update" prefHeight="42.0" prefWidth="121.0" style="-fx-background-color: #14243e;" text="Update" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></Button>
+                <TextField fx:id="txtno" layoutX="26.0" layoutY="317.0" prefHeight="42.0" prefWidth="186.0" promptText="Numbers">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </TextField>
+            </children>
+        </Pane>
+        <Pane layoutX="235.0" prefHeight="78.0" prefWidth="527.0" style="-fx-background-color: #c0c0c9;">
+            <children>
+                <Label layoutX="73.0" layoutY="18.0" prefHeight="42.0" prefWidth="338.0" text="All Books in Java Library" textFill="#14263e">
+                    <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                    </font>
+                </Label>
+                <Button fx:id="back" layoutX="448.0" layoutY="19.0" mnemonicParsing="false" onAction="#back" prefHeight="41.0" prefWidth="35.0" style="-fx-background-color: #761010; -fx-background-radius: 50;">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+               <graphic>
+                      <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../../images/12.png" />
+                          </image>
+                      </ImageView>
+               </graphic></Button>
+            </children>
+        </Pane>
+        <TableView fx:id="table" layoutX="235.0" layoutY="78.0" onMouseClicked="#Click_Table" prefHeight="446.0" prefWidth="527.0">
+            <columns>
+                <TableColumn fx:id="title" prefWidth="137.59996032714844" text="Title" />
+                <TableColumn fx:id="author" prefWidth="95.20001220703125" text="Author" />
+                <TableColumn fx:id="year" prefWidth="120.79998779296875" text="Year of Publication" />
+                <TableColumn fx:id="isbn" prefWidth="100.0" text="ISBN" />
+                <TableColumn fx:id="no" prefWidth="75.20001220703125" text="No" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
